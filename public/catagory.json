@@ -1,0 +1,89 @@
+
+
+{
+    "categories": [
+      {
+        "name": "Women Shoes",
+        "image": "https://i.ibb.co/0qBsxgg/cat-img-2.webp"
+      },
+      {
+        "name": "Leather Bags",
+        "image": "https://i.ibb.co/9pxWMh3/cat-img-8.webp"
+      },
+      {
+        "name": "Sunglasses",
+        "image": "https://i.ibb.co/0QBsFGc/cat-img-3.webp"
+      },
+      {
+        "name": "Gold Ring",
+        "image": "https://i.ibb.co/xszw0cp/cat-img-4.webp"
+      },
+      {
+        "name": "Makeup Box",
+        "image": "https://i.ibb.co/42RXDYT/cat-img-5.webp"
+      },
+      {
+        "name": "Watches",
+        "image": "https://i.ibb.co/L9dmNKZ/cat-img-6.webp"
+      },
+      {
+        "name": "Sweaters",
+        "image": "https://i.ibb.co/sy3cfsN/cat-img-7.webp"
+      },
+      {
+        "name": "Gold Rings",
+        "image": "https://i.ibb.co/vwhrtqj/cat-img-1-1.webp"
+      },
+      {
+        "name": "Shoes",
+        "image": "https://i.ibb.co/sy3cfsN/cat-img-7.webp"
+      },
+      {
+        "name": "Watches",
+        "image": "https://i.ibb.co/L9dmNKZ/cat-img-6.webp"
+      },
+      {
+        "name": "Leather Bags",
+        "image": "https://i.ibb.co/9pxWMh3/cat-img-8.webp"
+      },
+      {
+        "name": "Women Shoes",
+        "image": "https://i.ibb.co/0qBsxgg/cat-img-2.webp"
+      }
+    ],
+    "brands": [
+      {
+        "name": "Levi's",
+        "logo": "https://i.ibb.co/r64qJ4T/brand-img-1.webp"
+      },
+      {
+        "name": "Zara",
+        "logo": "https://i.ibb.co/YZGmtSf/brand-img-2.webp"
+      },
+      {
+        "name": "Tommy Hilfiger",
+        "logo": "https://i.ibb.co/FY6HSTB/brand-img-3.webp"
+      },
+      {
+        "name": "Puma",
+        "logo": "https://i.ibb.co/FBdbkn0/brand-img-4.webp"
+      },
+      {
+        "name": "Dior",
+        "logo": "https://i.ibb.co/6X8qvMb/brand-img-5.webp"
+      },
+      {
+        "name": "H&M",
+        "logo": "https://i.ibb.co/PWJrZK3/brand-img-6.webp"
+      },
+      {
+        "name": "Gucci",
+        "logo": "https://i.ibb.co/nfb0htJ/brand-img-7.webp"
+      },
+      {
+        "name": "Adidas",
+        "logo": "https://i.ibb.co/nfb0htJ/brand-img-7.webp"
+      }
+    ]
+  }
+  

@@ -1,0 +1,34 @@
+[
+    {
+        "image": "https://i.ibb.co/dQqsgZZ/h-1.webp",
+        "title": "Special Collection",
+        "subtitle": "NEW ARRIVALS",
+        "buttonText": "Shop Now",
+        "link": "/shop/special-collection"
+    },
+    {
+        "image": "https://i.ibb.co/VLMXFZL/h-2.webp",
+        "title": "30% Summer Sale",
+        "subtitle": "Limited Offer",
+        "buttonText": "Shop Now",
+        "link": "/shop/summer-sale"
+    },
+    {
+        "image": " https://i.ibb.co/Xs6zK1L/h-5.webp",
+        "title": "Floral Dresses",
+        "buttonText": "Shop Now",
+        "link": "/shop/floral-dresses"
+    },
+    {
+        "image": "https://i.ibb.co/PmrMjfB/h-3.webp",
+        "title": "Watch Collection",
+        "buttonText": "Shop Now",
+        "link": "/shop/watch-collection"
+    },
+    {
+        "image": "https://i.ibb.co/jkRqtjC/h-4.webp",
+        "title": "Men’s Sneakers",
+        "buttonText": "Shop Now",
+        "link": "/shop/mens-sneakers"
+    }
+]
