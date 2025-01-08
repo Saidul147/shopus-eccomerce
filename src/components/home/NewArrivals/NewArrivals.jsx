@@ -5,24 +5,8 @@ import { SlRefresh } from "react-icons/sl";
 import { IoIosHeartEmpty } from "react-icons/io";
 
 
-const NewArrivals = () => {
+const NewArrivals = ({datas}) => {
 
-    let [datas, setDatas] = useState([])
-
-    useEffect(() => {
-        let fetchData = async () => {
-            try {
-                let data = await fetch("/newArraival.json")
-                let result = await data.json()
-                setDatas(result)
-            } catch (error) {
-                console.log("Error fetching data:", error);
-            }
-        }
-        fetchData()
-    }, [])
-
-    console.log(datas)
 
     return (
         <div className='bg-white'>
@@ -36,20 +20,22 @@ const NewArrivals = () => {
                     <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-8 mt-4' >
                         {datas.map((item, i) => (
 
-                            <div className=' relative flex flex-col shadow-all-sides rounded-xl hover:border-red-500 border border-white group ' >
-                                <img src={item.image} className='my-8 md:my-4' alt="" />
-                                <div className='md:px-3 lg:px-4 px-4 '>
+                            <div className=' relative flex flex-col  shadow-all-sides rounded-xl hover:border-red-500 border border-white group ' >
+                                <div className='w-full flex items-center justify-center'>
+                                    <img src={item.image} className='my-8 md:my-4 max-h-[]' alt="" />
+                                </div>
+                                <div className='md:px-3 lg:px-4 px-4 flex flex-col items-center md:items-start w-full '>
                                     <p className='flex gap-1'>{Array.from({ length: item.rating }).map((_, i) => (
                                         <IoStar className='text-[#ffa800] text-[14px]' />
                                     ))}
                                     </p>
-                                    <h2 className='font-jost text-[18px] text-[#232532] font-[700] mt-1 '>{item.name}</h2>
+                                    <h2 className='font-jost text-[18px] text-[#232532] font-[700] mt-2 '>{item.name}</h2>
                                     <div className='flex gap-2 text-base text-[#797979] mb-2 font-[500]'>
                                         <p className='line-through'>{item.price}</p>
                                         <p className='text-rose-500'>{item.discountedPrice}</p>
                                     </div>
                                 </div>
-                                <button className='  flex justify-end'>
+                                <button className='  flex justify-end h-full items-end'>
                                     <span className=' font-bold text-rose-700 bg-rose-300 hover:bg-rose-700 hover:text-white py-3 pr-4 pl-6 rounded-tl-[40px] rounded-br-xl duration-300'>Add To Cart</span>
                                 </button>
 

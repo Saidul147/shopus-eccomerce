@@ -1,0 +1,100 @@
+
+
+[
+    {
+        "id": 1,
+        "name": "Rainbow Sequin Dress",
+        "price": 12.99,
+        "discountedPrice": 6.99,
+        "rating": 5,
+        "image": "https://i.ibb.co/44qbFHF/product-img-12.webp"
+    },
+    {
+        "id": 2,
+        "name": "Feminine Wrap Blouse",
+        "price": 9.99,
+        "discountedPrice": 6.99,
+        "rating": 5,
+        "image": "https://i.ibb.co/ScHK8PM/product-img-3.webp"
+    },
+    {
+        "id": 3,
+        "name": "Trendy Bucket Hat",
+        "price": 18.99,
+        "discountedPrice": 10.99,
+        "rating": 5,
+        "image": "https://i.ibb.co/bN2phtj/product-img-8.webp"
+    },
+    {
+        "id": 4,
+        "name": "Boho Maxi Dress",
+        "price": 20.99,
+        "discountedPrice": 10.99,
+        "rating": 5,
+        "image": "https://i.ibb.co/44qbFHF/product-img-12.webp"
+    },
+    {
+        "id": 5,
+        "name": "Casual Denim Jacket",
+        "price": 20.99,
+        "discountedPrice": 10.99,
+        "rating": 5,
+        "image": "https://i.ibb.co/93kP0pq/product-img-5.webp"
+    },
+    {
+        "id": 6,
+        "name": "Stylish Earrings",
+        "price": 20.99,
+        "discountedPrice": 9.99,
+        "rating": 5,
+        "image": "https://i.ibb.co/WyCCvdZ/product-img-6.webp"
+    },
+    {
+        "id": 7,
+        "name": "Leather Dress Shoes",
+        "price": 19.99,
+        "discountedPrice": 18.99,
+        "rating": 5,
+        "image": "https://i.ibb.co/XzMBw4J/product-img-7.webp"
+    },
+    {
+        "id": 8,
+        "name": "Wool Peacoat",
+        "price": 25.99,
+        "discountedPrice": 13.99,
+        "rating": 5,
+        "image": "https://i.ibb.co/bN2phtj/product-img-8.webp"
+    },
+    {
+      "id": 9,
+      "name": "Blue Suit",
+      "image": "https://i.ibb.co/Nm4FGP5/product-img-9.webp",
+      "price": 5.99,
+      "discountedPrice": 10.99,
+      "rating": 5
+    },
+    {
+      "id": 10,
+      "name": "Blue Party Dress",
+      "image": "https://i.ibb.co/93kP0pq/product-img-5.webp",
+      "price": 6.99,
+      "discountedPrice": 9.99,
+      "rating": 5
+    },
+    {
+      "id": 11,
+      "name": "White Hat",
+      "image": "https://i.ibb.co/CB58XrS/product-img-13.webp",
+      "price": 26.99,
+      "discountedPrice": 29.99,
+      "rating": 5
+    },
+    {
+      "id": 12,
+      "name": "White Checked Shirt",
+      "image": "https://i.ibb.co/ScHK8PM/product-img-3.webp",
+      "price": 16.99,
+      "discountedPrice": 19.99,
+      "rating": 5
+    }
+]

@@ -58,7 +58,7 @@ const Banner = () => {
                                              transition: 'left 0.5s ease-in-out, opacity 0.1s ease-in-out',
                                            }}
                                          ></div>
-                                         <span className='flex items-center md:px-6 py-4 gap-3'
+                                         <span className='flex items-center md:px-6 px-3 py-4 gap-3'
                                            style={{
                                              position: 'relative',
                                              zIndex: 10,
