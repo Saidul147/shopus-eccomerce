@@ -26,7 +26,7 @@ const TopSellings = ({ datas }) => {
                         <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-8 mt-10' >
                             {randomData.map((item, i) => (
 
-                                <div className=' relative grid grid-cols-2 gap-2 items-center p-4 shadow-all-sides rounded-xl hover:border-red-500 border border-white group bg-white' >
+                                <div data-aos="fade-right" className=' relative grid grid-cols-2 gap-2 items-center p-4 shadow-all-sides rounded-xl hover:border-red-500 border border-white group bg-white' >
                                     <div className='w-full flex items-center justify-center'>
                                         <img src={item.image} className=' bg-rose-100' alt="" />
                                     </div>

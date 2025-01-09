@@ -41,7 +41,7 @@ const TopSellingsProducts = () => {
                             <div className='grid xl:grid-cols-6 lg:grid-cols-3 md:grid-cols-3  2xl:gap-5 xl:gap-4 gap-5 mt-10' >
                                 {datas.map((item, i) => (
 
-                                    <div key={i} className=' relative flex flex-col bg-white shadow-all-sides rounded-xl hover:border-red-500 border border-white group ' >
+                                    <div  data-aos="fade-up"  key={i} className=' relative flex flex-col bg-white shadow-all-sides rounded-xl hover:border-red-500 border border-white group ' >
                                         <div className='w-full flex items-center justify-center md:mb-8 mb-12'>
                                             <div className='h-[205px]'>
                                             <img src={item.image} className='my-8 md:my-4 w-full h-full' alt="" />

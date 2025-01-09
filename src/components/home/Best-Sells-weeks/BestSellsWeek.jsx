@@ -11,16 +11,16 @@ const BestSellsWeek = ({ datas }) => {
     return (
         <div className='bg-[#fff6f5]'>
             <FlashSale datas={datas} title={"Best Sale In This Week"}></FlashSale>
-            <div className='max-w-[1320px] mx-auto px-4 2xl:px-0 pb-16'>
+            <div className='max-w-[1320px] mx-auto px-4 2xl:px-0 pb-16' >
                 <div className="flex flex-col md:flex-row  gap-8">
-                    <div className='h-[460px] flex justify-end bg-cover bg-center z-50 relative w-full rounded-xl' style={{ backgroundImage: `url(${bg1})` }}>
+                    <div data-aos="fade-right" className='h-[460px] flex justify-end bg-cover bg-center z-50 relative w-full rounded-xl' style={{ backgroundImage: `url(${bg1})` }}>
                         <div className='flex flex-col p-[32px]'>
                             <p className='uppercase text-sm font-jost mb-[10px]'>New Style</p>
                             <h2 className='text-[34px] font-jost font-[700] max-w-[11ch] leading-[1.2]'>Get 65% Offer & Make New  Fusion</h2>
                             <HoverButton></HoverButton>
                         </div>
                     </div>
-                    <div className='h-[460px] bg-cover bg-center bg-no-repeat z-50 relative w-full rounded-xl' style={{ backgroundImage: `url(${bg2})` }}>
+                    <div data-aos="fade-up"  className='h-[460px] bg-cover bg-center bg-no-repeat z-50 relative w-full rounded-xl' style={{ backgroundImage: `url(${bg2})` }}>
                         <div className='flex flex-col p-[32px]'>
                             <p className='uppercase text-sm font-jost mb-[10px]'>Mega Offer</p>
                             <h2 className='text-[34px] font-jost font-[700] max-w-[12ch] leading-[1.2] '>Make Your New Styles With our products</h2>

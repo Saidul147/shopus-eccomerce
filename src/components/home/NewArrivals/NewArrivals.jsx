@@ -20,7 +20,7 @@ const NewArrivals = ({datas}) => {
                     <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-8 mt-4' >
                         {datas.map((item, i) => (
 
-                            <div className=' relative flex flex-col  shadow-all-sides rounded-xl hover:border-red-500 border border-white group ' >
+                            <div data-aos="fade-up" className=' relative flex flex-col  shadow-all-sides rounded-xl hover:border-red-500 border border-white group ' >
                                 <div className='w-full flex items-center justify-center'>
                                     <img src={item.image} className='my-8 md:my-4 max-h-[]' alt="" />
                                 </div>

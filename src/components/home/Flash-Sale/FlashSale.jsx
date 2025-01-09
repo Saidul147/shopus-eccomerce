@@ -43,7 +43,7 @@ const FlashSale = ({datas,title}) => {
                                 <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-8 mt-10' >
                                     {datas.slice(2,6).map((item, i) => (
             
-                                        <div className=' relative flex flex-col  shadow-all-sides rounded-xl hover:border-red-500 border border-white group bg-white' >
+                                        <div data-aos="fade-right" className=' relative flex flex-col  shadow-all-sides rounded-xl hover:border-red-500 border border-white group bg-white' >
                                            <div className='w-full flex items-center justify-center'>
                                               <img src={item.image} className='my-8 md:my-4 max-h-[]' alt="" />
                                            </div>

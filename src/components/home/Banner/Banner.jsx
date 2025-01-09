@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import bg from '../../../assets/discount-bg.webp'
 import { FaArrowRight } from "react-icons/fa6";
 
+
+
 const Banner = () => {
+
+
 
           const [isHovered, setIsHovered] = useState(false);
                 const [leftPosition, setLeftPosition] = useState('-100%'); // Initial position
@@ -30,9 +34,9 @@ const Banner = () => {
         <div className='py-16'>
             <div className='max-w-[1320px] mx-auto px-4 2xl:px-0'>
             <div className="w-full h-[305px]">
-                <div className='bg-cover bg-center bg-no-repeat w-full h-full' style={{ backgroundImage: `url(${bg})`, }}>
-                    <div className='flex flex-col items-center justify-center h-full gap-3 text-center font-inter'>
-                        <p className=' text-base font-[400] text-white'>New Style</p>
+                <div data-aos="zoom-in" className='bg-cover bg-center bg-no-repeat w-full h-full' style={{ backgroundImage: `url(${bg})`, }}>
+                    <div  className='flex flex-col items-center justify-center h-full gap-3 text-center font-inter'>
+                        <p  className=' text-base font-[400] text-white'>New Style</p>
                         <h1 className='text text-[46px] font-[700] text-white leading-[1.2]'>Get 65%  <span className='text-rose-500'>Offer </span> <br />
                             & Make New Fusion.</h1>
                             

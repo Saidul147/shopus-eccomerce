@@ -48,7 +48,7 @@ const Catagory = () => {
                 <div className='grid lg:grid-cols-6 md:grid-cols-4 gap-10  my-8 font-inter text-[#232532]'>
 
                     {categories.map((item, i) => (
-                        <div className="flex flex-col justify-center items-center gap-5" key={i}>
+                        <div data-aos="fade-right" data-aos-delay="100" className="flex flex-col justify-center items-center gap-5" key={i}>
                             <div className="rounded-full overflow-hidden">
                                 <img
                                     className="hover:scale-110 duration-300"
@@ -72,12 +72,12 @@ const Catagory = () => {
 
                 <div className='mt-20'>
                     <div className='grid md:grid-cols-2 gap-20'>
-                        <h2 className='font-inter text-[30px] max-w-[26ch]'>Hundreds of companies have been
+                        <h2 data-aos="fade-right" className='font-inter text-[30px] max-w-[26ch]'>Hundreds of companies have been
                         powered by <span className='font-[700]'>ShopUs.</span></h2>
 
                         <div className='grid md:grid-cols-4 grid-cols-2 gap-10 lg:gap-16 md:gap-8 justify-items-center'>
                             {brand.map((item,i) => (
-                                <div>
+                                <div data-aos="zoom-out">
                                     <img src={item.logo} alt="" />
                                 </div>
                             ))}
