@@ -11,7 +11,7 @@ const FlashSale = ({datas,title}) => {
 
     return (
         <div>
-               <div className='bg-[#ffeeed] bg-gradient-to-r from-[#fff5f4] to-[#ffeceb]'>
+               <div className={`${title.length > 12 ? "bg-[#fff6f5]":" bg-[#ffeeed] bg-gradient-to-r from-[#fff5f4] to-[#ffeceb]"}`}>
                         <div className='max-w-[1320px] mx-auto px-4 2xl:px-0  md:py-16 py-[50px]'>
                             <div>
                                 <div className={`${title.length > 12 ? "grid grid-cols-12 ":"grid  md:grid-cols-12 grid-cols-2"}   w-full  text-[#232532] font-jost font-[700] items-center `}>

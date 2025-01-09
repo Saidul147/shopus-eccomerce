@@ -28,7 +28,7 @@ const Banner = () => {
 
     return (
         <div className='py-16'>
-            <div className='max-w-[1320px] mx-auto'>
+            <div className='max-w-[1320px] mx-auto px-4 2xl:px-0'>
             <div className="w-full h-[305px]">
                 <div className='bg-cover bg-center bg-no-repeat w-full h-full' style={{ backgroundImage: `url(${bg})`, }}>
                     <div className='flex flex-col items-center justify-center h-full gap-3 text-center font-inter'>

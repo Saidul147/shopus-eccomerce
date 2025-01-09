@@ -88,7 +88,7 @@ const TopNav = () => {
 
   return (
     <div className=' border-b pb-4 '>
-      <div className='max-w-[1320px] mx-auto px-4 2xl:px-0 flex justify-between mt-4 items-center '>
+      <div className='max-w-[1320px] mx-auto px-4 2xl:px-0 flex justify-between pt-4 items-center '>
         <div className='flex gap-4 text-xs font-poppins'>
           <a href="">Account</a>
           <a href="">Track Order</a>

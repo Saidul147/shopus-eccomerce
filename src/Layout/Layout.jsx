@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Navbar from '../Shared/Navbar';
 import TopNav from '../Shared/TopNav';
 import MiddleNav from '../Shared/MiddleNav';
+import Footer from '../Shared/Footer';
 
 const Layout = () => {
     return (
@@ -11,6 +12,7 @@ const Layout = () => {
             <MiddleNav></MiddleNav>
             <Navbar></Navbar>
            <Outlet/> 
+           <Footer></Footer>
         </div>
     );
 };

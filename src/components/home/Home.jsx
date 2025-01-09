@@ -49,6 +49,7 @@ const Home = () => {
                 <BestSellers></BestSellers>
                 <BestSellsWeek datas={datas}></BestSellsWeek>
                 <TopSellingsProducts datas={datas}></TopSellingsProducts>
+                <></>
             </div>
         </div>
     )

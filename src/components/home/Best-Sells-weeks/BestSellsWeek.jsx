@@ -9,7 +9,7 @@ const BestSellsWeek = ({ datas }) => {
 
 
     return (
-        <div className='bg-[#ffeeed] bg-gradient-to-r from-[#fff5f4] to-[#ffeceb]'>
+        <div className='bg-[#fff6f5]'>
             <FlashSale datas={datas} title={"Best Sale In This Week"}></FlashSale>
             <div className='max-w-[1320px] mx-auto px-4 2xl:px-0 pb-16'>
                 <div className="flex flex-col md:flex-row  gap-8">

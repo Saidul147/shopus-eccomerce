@@ -31,10 +31,10 @@ const TopSellingsProducts = () => {
         <div>
             <div>
                 <div className='bg-[#fff6f5] '>
-                    <div className='max-w-[1320px] mx-auto px-4 2xl:px-0  md:py-16 py-[50px]'>
+                    <div className='max-w-[1320px] mx-auto px-4 2xl:px-0  md:pb-16 pb-[50px]'>
                         <div>
-                            <div className='grid grid-cols-2 w-full  text-[#232532] font-jost font-[700] items-center '>
-                                <h2 className='  text-[30px]'>Top Sellings Products</h2>
+                            <div className='grid grid-cols-5 w-full  text-[#232532] font-jost font-[700] items-center '>
+                                <h2 className='col-span-4 text-[20px] md:text-[30px]'>Top Sellings Products</h2>
                                 <button className='flex justify-end'>View All</button>
                             </div>
 
@@ -42,10 +42,12 @@ const TopSellingsProducts = () => {
                                 {datas.map((item, i) => (
 
                                     <div key={i} className=' relative flex flex-col bg-white shadow-all-sides rounded-xl hover:border-red-500 border border-white group ' >
-                                        <div className='w-full flex items-center justify-center'>
-                                            <img src={item.image} className='my-8 md:my-4 max-h-[]' alt="" />
+                                        <div className='w-full flex items-center justify-center md:mb-8 mb-12'>
+                                            <div className='h-[205px]'>
+                                            <img src={item.image} className='my-8 md:my-4 w-full h-full' alt="" />
+                                            </div>
                                         </div>
-                                        <div className='md:px-3 lg:px-2 py-4 px-4 flex flex-col items-center md:items-start w-full '>
+                                        <div className='md:pl-4 lg:pl-6 xl:pl-3 pb-4 px-4 flex flex-col items-center md:items-start w-full '>
                                             <p className='flex gap-1'>{Array.from({ length: item.rating }).map((_, i) => (
                                                 <IoStar className='text-[#ffa800] text-[14px]' />
                                             ))}
