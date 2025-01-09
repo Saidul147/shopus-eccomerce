@@ -300,7 +300,7 @@ const Navbar = () => {
           </button>
 
 
-          {sideBar && <div className='w-[250px]  bg-white overflow-auto h-screen fixed top-0 left-0 px-5 custom-scrollbar'>
+          {sideBar && <div className= {` ${sideBar ? "max-w-[250px] duration-700 opacity-100":"w-0 opacity-0 "} transition-all duration-300  ease-in-out   bg-white overflow-auto h-screen fixed top-0 left-0 px-5 custom-scrollbar`}>
             <div className='grid grid-flow-row mt-12 gap-8'>
               <div className='flex gap-6 items-center '>
                 <div className='relative'>
