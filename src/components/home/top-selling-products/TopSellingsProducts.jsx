@@ -31,11 +31,12 @@ const TopSellingsProducts = () => {
         <div>
             <div>
                 <div className='bg-[#fff6f5] '>
-                    <div className='max-w-[1320px] mx-auto px-4 2xl:px-0  md:pb-16 pb-[50px]'>
+                    <div className='max-w-[1320px] mx-auto px-4 2xl:px-0 ] lg:pb-[120px] pb-[150px]'>
                         <div>
                             <div className='grid grid-cols-5 w-full  text-[#232532] font-jost font-[700] items-center '>
                                 <h2 className='col-span-4 text-[20px] md:text-[30px]'>Top Sellings Products</h2>
-                                <button className='flex justify-end'>View All</button>
+                                <button className='flex justify-end '><div className='hoverd-line'>
+                                View All</div></button>
                             </div>
 
                             <div className='grid xl:grid-cols-6 lg:grid-cols-3 md:grid-cols-3  2xl:gap-5 xl:gap-4 gap-5 mt-10' >

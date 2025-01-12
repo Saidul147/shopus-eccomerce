@@ -43,7 +43,7 @@ const Home = () => {
 
     }, [])
 
-    console.log(datas)
+    // console.log(datas)
 
     return (
         <div>

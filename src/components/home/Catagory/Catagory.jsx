@@ -42,7 +42,7 @@ const Catagory = () => {
             <div>
                 <div className='flex  w-full justify-between text-[#232532] font-jost font-[700]'>
                     <h2 className='text-[30px]'>Our Categories</h2>
-                    <button>View All</button>
+                    <button className=''><div className='hoverd-line'>View All</div></button>
                 </div>
 
                 <div className='grid lg:grid-cols-6 md:grid-cols-4 gap-10  my-8 font-inter text-[#232532]'>

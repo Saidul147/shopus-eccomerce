@@ -40,7 +40,7 @@ const BestSellers = () => {
             <div className='max-w-[1320px] mx-auto  bg-white  py-8 px-4 rounded-xl'>
             <div className='grid grid-cols-2 w-full  text-[#232532] font-jost font-[700] items-center'>
                             <h2 className='  text-[30px]'>Best Sellers</h2>
-                            <button className='flex justify-end'>View All</button>
+                            <button className='flex justify-end '><div className='hoverd-line'>View All</div></button>
                         </div>
                 <div className='grid md:grid-cols-4 lg:grid-cols-6 gap-y-6 grid-cols-2 gap-10'>
                     {items.map((item,i) => (

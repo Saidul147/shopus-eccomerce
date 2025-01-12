@@ -12,6 +12,7 @@ import cartimg1 from "../assets/product-img-1.png"
 import cartimg2 from "../assets/product-img-2.png"
 import cartimg3 from "../assets/product-img-3.png"
 import cartimg4 from "../assets/product-img-4.png"
+import { NavLink } from 'react-router-dom';
 
   const MiddleNav = () => {
 
@@ -169,12 +170,12 @@ import cartimg4 from "../assets/product-img-4.png"
               </div>
               <div className='relative' onMouseEnter={() => handleMouseEnterNav('cart')}
                 onMouseLeave={() => handleMouseLeaveNav('cart')}>
-                <a href="">
+                <NavLink to={"/cart"}>
                   <PiBag className='text-2xl ' />
                   <span className='absolute text-[10px] w-4 h-4 flex items-center justify-center text-xs font-[600] text-white bg-rose-700 rounded-full -right-1 -top-1'>
                     0
                   </span>
-                </a>
+                </NavLink>
                 <ul
                   className={`absolute grid grid-flow-row gap-3 bg-white p-4 z-50 shadow-md top-[20px] -left-[220px]
                 transition-all duration-500 ease-in-out text-[16px] md:text-[12px] lg:text-[16px] text-[#797979] rounded-sm

@@ -213,9 +213,9 @@ const Navbar = () => {
                       : 'opacity-0 translate-y-0 invisible'}`}>
 
                     {
-                      menuData[1].subMenu.map((item, key) => {
+                      menuData[1].subMenu.map((item, index) => {
                         return (
-                          <div className=''>
+                          <div className='' key={index*.5}>
                             <h2 className='font-[700] text-[20px] md:text-[16px] lg:text-[20px] text-black mb-4'>{item.category}</h2>
                             {item.items.map((name) => (
                               <li className='mb-2 text-[16px] md:text-[12px] lg:text-[16px] hover:text-rose-700'><a href="">{name}</a></li>
@@ -233,7 +233,7 @@ const Navbar = () => {
                   <ul className={`flex flex-col absolute bg-white text-[#797979] w-[200px] py-6 p-4 gap-3 shadow-md top-[38px] -left-1 rounded-sm
                     transition-all duration-500 ease-in-out  ${hoverStates.page ? "opacity-100 translate-y-1 visible" : "opacity-0 translate-y-0 invisible "}`} >
                     {menuData[2].subMenu.map((item, i) => (
-                      <li className='hover:text-rose-700 text-[16px] md:text-[12px] lg:text-[16px]' key={i} ><a href="">{item.name}</a></li>
+                      <li key={i} className='hover:text-rose-700 text-[16px] md:text-[12px] lg:text-[16px]' key={i} ><a href="">{item.name}</a></li>
                     ))}
                   </ul>
 
@@ -295,12 +295,12 @@ const Navbar = () => {
 
       <div className='grid md:hidden grid-cols-6 max-w-[1320px] mx-auto px-4 2xl:px-0 my-4 items-center '>
         <div ref={sideBarRef}>
-          <button onClick={() => handleSideBar()} >
+          <button onClick={() => handleSideBar()} className='relative z-50' >
             <RiMenu2Fill />
           </button>
 
 
-          {sideBar && <div className= {` ${sideBar ? "max-w-[250px] duration-700 opacity-100":"w-0 opacity-0 "} transition-all duration-300  ease-in-out   bg-white overflow-auto h-screen fixed top-0 left-0 px-5 custom-scrollbar`}>
+           <div className= {` ${sideBar ? "w-[250px] duration-700 opacity-100 z-50":"w-0 opacity-0 "} transition-all duration-300  ease-in-out   bg-white overflow-auto h-screen fixed top-0 left-0 px-5 custom-scrollbar`}>
             <div className='grid grid-flow-row mt-12 gap-8'>
               <div className='flex gap-6 items-center '>
                 <div className='relative'>
@@ -350,7 +350,7 @@ const Navbar = () => {
               </ul>
             </div>
 
-          </div>}
+          </div>
 
         </div>
         <div className='col-span-4'>

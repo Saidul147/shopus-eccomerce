@@ -73,3 +73,20 @@
               10px 0 15px -3px rgba(0, 0, 0, 0.03),  /* Right shadow */
               -10px 0 15px -3px rgba(0, 0, 0, 0.03); /* Left shadow */
 }
+.hoverd-line{
+  position: relative;
+}
+.hoverd-line::after{
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #232532;
+  bottom: 0;
+  left: 0;
+  transition: all .5s ease-in-out;
+}
+
+.hoverd-line:hover::after{
+  width: 100%;
+}

@@ -15,7 +15,7 @@ const Footer = () => {
 
         {/*============== footer top  ==============*/}
 
-                <div className='relative h-full xl:-top-[50px] md:-top-20 lg:-top-[60px] -top-[70px] md:mt-16 mt-[70px] grid md:grid-cols-2 lg:grid-cols-4 items-center md:place-items-center w-full gap-4 bg-rose-700 text-white md:py-7 p-7 rounded-md'>
+                <div className='relative h-full xl:-top-[50px] md:-top-20 lg:-top-[60px] -top-[70px]  grid md:grid-cols-2 lg:grid-cols-4 items-center md:place-items-center w-full gap-4 bg-rose-700 text-white md:py-7 p-7 rounded-md'>
                     <div className='flex  gap-4'>
                         <div className='w-[44px] h-[44px]'><LiaShippingFastSolid className='w-full h-full ' /></div>
                         <div className='flex flex-col'>

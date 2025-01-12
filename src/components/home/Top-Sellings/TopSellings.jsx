@@ -20,7 +20,8 @@ const TopSellings = ({ datas }) => {
                     <div>
                         <div className='grid grid-cols-2 w-full  text-[#232532] font-jost font-[700] items-center '>
                             <h2 className='  text-[30px]'>Top Sellings Products</h2>
-                            <button className='flex justify-end'>View All</button>
+                            <button className='flex justify-end '><div className='hoverd-line'>
+                            View All</div></button>
                         </div>
 
                         <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-8 mt-10' >
