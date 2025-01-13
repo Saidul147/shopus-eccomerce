@@ -5,7 +5,9 @@
         "price": 12.99,
         "discountedPrice": 6.99,
         "rating": 5,
-        "image": "https://i.ibb.co/r7yWDvb/product-img-1.webp"
+        "image": "https://i.ibb.co/r7yWDvb/product-img-1.webp",
+        "quantity":1,
+        "total":12.99
     },
     {
         "id": 2,
@@ -13,7 +15,9 @@
         "price": 9.99,
         "discountedPrice": 6.99,
         "rating": 5,
-        "image": "https://i.ibb.co/ScHK8PM/product-img-3.webp"
+        "image": "https://i.ibb.co/ScHK8PM/product-img-3.webp",
+        "quantity":1,
+        "total":6.99
     },
     {
         "id": 3,
@@ -21,7 +25,9 @@
         "price": 18.99,
         "discountedPrice": 10.99,
         "rating": 5,
-        "image": "https://i.ibb.co/tXkjbS7/product-img-2.webp"
+        "image": "https://i.ibb.co/tXkjbS7/product-img-2.webp",
+        "quantity":1,
+        "total":10.99
     },
     {
         "id": 4,
@@ -29,7 +35,9 @@
         "price": 20.99,
         "discountedPrice": 10.99,
         "rating": 5,
-        "image": "https://i.ibb.co/jbPJT1V/product-img-4.webp"
+        "image": "https://i.ibb.co/jbPJT1V/product-img-4.webp",
+        "quantity":1,
+        "total":10.99
     },
     {
         "id": 5,
@@ -37,7 +45,9 @@
         "price": 20.99,
         "discountedPrice": 10.99,
         "rating": 5,
-        "image": "https://i.ibb.co/93kP0pq/product-img-5.webp"
+        "image": "https://i.ibb.co/93kP0pq/product-img-5.webp",
+        "quantity":1,
+        "total":10.99
     },
     {
         "id": 6,
@@ -45,7 +55,9 @@
         "price": 20.99,
         "discountedPrice": 9.99,
         "rating": 5,
-        "image": "https://i.ibb.co/WyCCvdZ/product-img-6.webp"
+        "image": "https://i.ibb.co/WyCCvdZ/product-img-6.webp",
+        "quantity":1,
+        "total":9.99
     },
     {
         "id": 7,
@@ -53,7 +65,9 @@
         "price": 19.99,
         "discountedPrice": 18.99,
         "rating": 5,
-        "image": "https://i.ibb.co/XzMBw4J/product-img-7.webp"
+        "image": "https://i.ibb.co/XzMBw4J/product-img-7.webp",
+        "quantity":1,
+        "total":18.99
     },
     {
         "id": 8,
@@ -61,6 +75,8 @@
         "price": 25.99,
         "discountedPrice": 13.99,
         "rating": 5,
-        "image": "https://i.ibb.co/bN2phtj/product-img-8.webp"
+        "image": "https://i.ibb.co/bN2phtj/product-img-8.webp",
+        "quantity":1,
+        "total":13.99
     }
 ]

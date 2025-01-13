@@ -9,6 +9,20 @@ import { IoIosHeartEmpty } from "react-icons/io";
 const FlashSale = ({ datas, title }) => {
 
 
+    let handleButton = (items) => {
+        let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+        let existingItem = cart.findIndex((itm) => itm.id === items.id)
+
+        console.log(existingItem)
+
+        if(existingItem === -1){
+            cart.push({...items})
+        }
+        localStorage.setItem("cartItems",JSON.stringify(cart))
+    }
+
+
     return (
         <div>
             <div className={`${title.length > 12 ? "bg-[#fff6f5]" : " bg-[#ffeeed] bg-gradient-to-r from-[#fff5f4] to-[#ffeceb]"}`}>
@@ -44,12 +58,12 @@ const FlashSale = ({ datas, title }) => {
                         <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-8 mt-10' >
                             {datas.slice(2, 6).map((item, i) => (
 
-                                <div data-aos="fade-right" className=' relative flex flex-col  shadow-all-sides rounded-xl hover:border-red-500 border border-white group bg-white' >
+                                <div key={i} data-aos="fade-right" className=' relative flex flex-col  shadow-all-sides rounded-xl hover:border-red-500 border border-white group bg-white' >
                                     <div className='w-full flex items-center justify-center'>
                                         <img src={item.image} className='my-8 md:my-4 max-h-[]' alt="" />
                                     </div>
                                     <div className='md:px-3 lg:px-4 px-4 flex flex-col items-center md:items-start w-full '>
-                                        <p className='flex gap-1'>{Array.from({ length: item.rating }).map((_, i) => (
+                                        <p key={i } className='flex gap-1'>{Array.from({ length: item.rating }).map((_, i) => (
                                             <IoStar className='text-[#ffa800] text-[14px]' />
                                         ))}
                                         </p>
@@ -59,7 +73,7 @@ const FlashSale = ({ datas, title }) => {
                                             <p className='text-rose-500'>{item.discountedPrice}</p>
                                         </div>
                                     </div>
-                                    <button className='  flex justify-end h-full items-end'>
+                                    <button className='  flex justify-end h-full items-end' onClick={() => handleButton(item)}  >
                                         <span className=' font-bold text-rose-700 bg-rose-300 hover:bg-rose-700 hover:text-white py-3 pr-4 pl-6 rounded-tl-[40px] rounded-br-xl duration-300'>Add To Cart</span>
                                     </button>
 

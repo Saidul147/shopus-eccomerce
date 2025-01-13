@@ -48,7 +48,7 @@ const Catagory = () => {
                 <div className='grid lg:grid-cols-6 md:grid-cols-4 gap-10  my-8 font-inter text-[#232532]'>
 
                     {categories.map((item, i) => (
-                        <div data-aos="fade-right" data-aos-delay="100" className="flex flex-col justify-center items-center gap-5" key={i}>
+                        <div key={i} data-aos="fade-right" data-aos-delay="100" className="flex flex-col justify-center items-center gap-5" key={i}>
                             <div className="rounded-full overflow-hidden">
                                 <img
                                     className="hover:scale-110 duration-300"

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { RiArrowDropDownLine } from "react-icons/ri";
 
 
@@ -15,13 +15,21 @@ const Checkout = () => {
         alert(`You selected: ${selectedOption}`);
     };
 
-   
+
     let cart = JSON.parse(localStorage.getItem("cartItems") || "[]");
-    console.log(cart)
+    // console.log(cart)
 
-    let [total,setTotal] = useState()
-
+    let [totals, setTotals] = useState()
     
+    
+    useEffect(() => {
+        let total = 0;
+        let cartTotal = cart.map((item) => {
+             total += item.total
+        })
+        setTotals(total.toFixed(2))
+    },[])
+
 
 
     return (
@@ -153,18 +161,18 @@ const Checkout = () => {
                                             <h2 className=''>Total</h2>
                                         </div>
 
-                                        {cart.map((item,i) => (
+                                        {cart.map((item, i) => (
                                             <div>
                                                 <div className='flex justify-between  items-center   '>
-                                            <div className='flex items-center gap-3'>
-                                                <img src={item.img} className='w-[70px] border' alt="" />
-                                                <div>
-                                                <h1 className='font-jost text-[15px] text-[#232532]'>{item.productName} x {item.quantity} </h1>
-                                                <p className='text-[13px] font-inter text-[#797979]'>price {item.price} * {item.quantity}</p>
+                                                    <div className='flex items-center gap-3'>
+                                                        <img src={item.image} className='w-[70px] border' alt="" />
+                                                        <div>
+                                                            <h1 className='font-jost text-[15px] text-[#232532]'>{item.name} x {item.quantity} </h1>
+                                                            <p className='text-[13px] font-inter text-[#797979]'>Price Per Item ${item.price}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div > ${item.total} </div>
                                                 </div>
-                                            </div>
-                                            <div > ${item.total} </div>
-                                        </div>
                                             </div>
                                         ))}
 
@@ -177,7 +185,7 @@ const Checkout = () => {
                                         </div> */}
                                         <div className='flex justify-between pt-4 border-t border-rose-100'>
                                             <h3>SUBTOTAL</h3>
-                                            <span>$365</span>
+                                            <span>{totals}</span>
                                         </div>
                                         <div className='flex flex-col gap-1 border-b pb-4 border-rose-100'>
                                             <p className='uppercase text-[#797979]'>Shipping</p>
@@ -188,7 +196,7 @@ const Checkout = () => {
                                         </div>
                                         <div className='flex justify-between text-[25px] font-[500]'>
                                             <h1>TOTAL</h1>
-                                            <span className='text-rose-500'>$365</span>
+                                            <span className='text-rose-500'>{totals}</span>
                                         </div>
                                     </div>
                                     <div className=" mt-5">
@@ -201,14 +209,15 @@ const Checkout = () => {
                                                     value="Bank Transfer"
                                                     checked={selectedOption === "Bank Transfer"}
                                                     onChange={handleChange}
-                                                    style={{ accentColor: "#AE1C9A"}}
+                                                    className='cursor-pointer'
+                                                    style={{ accentColor: "#AE1C9A" }}
                                                 />
                                                 <div>
-                                                <label htmlFor="creditCard" className="text-[20px] font-medium text-gray-700">
-                                                    Direct Bank Transfer
-                                                </label>
-                                                <p className='text-[#797979] text-[15px] font-inter max-w-[50ch] '>Make your payment directly into our bank account. Please use
-                                                your Order ID as the payment reference.</p>
+                                                    <label htmlFor="creditCard" className="text-[20px] font-medium text-gray-700">
+                                                        Direct Bank Transfer
+                                                    </label>
+                                                    <p className='text-[#797979] text-[15px] font-inter max-w-[50ch] '>Make your payment directly into our bank account. Please use
+                                                        your Order ID as the payment reference.</p>
                                                 </div>
                                             </div>
 
@@ -220,15 +229,16 @@ const Checkout = () => {
                                                     value="Cash On"
                                                     checked={selectedOption === "Cash On"}
                                                     onChange={handleChange}
-                                                    
-                                                    style={{ accentColor: "#AE1C9A"}}
+                                                    className='cursor-pointer'
+
+                                                    style={{ accentColor: "#AE1C9A" }}
                                                 />
                                                 <label htmlFor="paypal" className="text-[20px] font-medium text-gray-700">
                                                     Cash On Delivery
                                                 </label>
                                             </div>
 
-                                            <div className="flex items-center space-x-5 px-4 py-4 hover:bg-rose-200 transition-all duration-300 rounded-md">
+                                            <div className="flex items-center space-x-5 px-4 py-4 hover:bg-rose-200 transition-all duration-300 rounded-md" >
                                                 <input
                                                     type="radio"
                                                     id="creditCard"
@@ -236,11 +246,12 @@ const Checkout = () => {
                                                     value="Credit Card"
                                                     checked={selectedOption === "Credit Card"}
                                                     onChange={handleChange}
-                                                    
-                                                    style={{ accentColor: "#AE1C9A"}}
+                                                    className='cursor-pointer'
+
+                                                    style={{ accentColor: "#AE1C9A" }}
                                                 />
-                                                <label htmlFor="bankTransfer" className="text-[20px] font-medium text-gray-700">
-                                                Credit/Debit Cards or Paypal
+                                                <label htmlFor="bankTransfer" className="text-[20px] font-medium text-gray-700 ">
+                                                    Credit/Debit Cards or Paypal
                                                 </label>
                                             </div>
 

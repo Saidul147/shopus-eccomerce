@@ -44,7 +44,7 @@ const BestSellers = () => {
                         </div>
                 <div className='grid md:grid-cols-4 lg:grid-cols-6 gap-y-6 grid-cols-2 gap-10'>
                     {items.map((item,i) => (
-                            <div className='flex flex-col items-center justify-between'>
+                            <div key={i} className='flex flex-col items-center justify-between'>
                                 <img src={item.logo} alt="" className='hover:scale-110 duration-300' />
                                 <p className='text-[20px] font-[500]'>{item.name}</p>
                             </div>

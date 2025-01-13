@@ -56,46 +56,46 @@ const Cart = () => {
 
     //  quantity - and + function is here   ============
 
-    let [quantity,setQuantity] = useState(cartItems)
-    let navigate = useNavigate()
+    // let [quantity,setQuantity] = useState(cartItems)
+    // let navigate = useNavigate()
 
-    let handleQuantity = (e, index, value) => {
+    // let handleQuantity = (e, index, value) => {
 
-      let updateQuantity = quantity.map((item, i) => {
-            if (i === index) {
-              const newQuantity = value === "increase" ? item.quantity + 1 : Math.max(1, item.quantity - 1);
-              return {
-                ...item,
-                quantity: newQuantity,
-                total: item.price * newQuantity, 
-              };
-            }
-            return item;
-          })
+    //   let updateQuantity = quantity.map((item, i) => {
+    //         if (i === index) {
+    //           const newQuantity = value === "increase" ? item.quantity + 1 : Math.max(1, item.quantity - 1);
+    //           return {
+    //             ...item,
+    //             quantity: newQuantity,
+    //             total: item.price * newQuantity, 
+    //           };
+    //         }
+    //         return item;
+    //       })
           
-          setQuantity(updateQuantity)
-      };
+    //       setQuantity(updateQuantity)
+    //   };
 
-      let handleClose = (id) => {
-        let filterd = quantity.filter((item) => item.id !== id)
-          setQuantity(filterd)
+    //   let handleClose = (id) => {
+    //     let filterd = quantity.filter((item) => item.id !== id)
+    //       setQuantity(filterd)
 
-          // if every cart is close then it automatically goes to empty-cart page
-          if(filterd.length === 0){
-            navigate("/empty-cart");
-          }
-      }
+    //       // if every cart is close then it automatically goes to empty-cart page
+    //       if(filterd.length === 0){
+    //         navigate("/empty-cart");
+    //       }
+    //   }
 
-      //  clear button to clear all item of cart at once
-      let handleClear = (e) => {
-        setQuantity([])
-      }
+    //   //  clear button to clear all item of cart at once
+    //   let handleClear = (e) => {
+    //     setQuantity([])
+    //   }
 
-        const [items,setItems] = useState(quantity)
-      console.log(items)
+    //     const [items,setItems] = useState(quantity)
+    //   console.log(items)
 
 
-      // to scroll top with smoothly============
+    //   // to scroll top with smoothly============
 
       let handleScroll = (e) => {
         window.scrollTo({
@@ -105,16 +105,56 @@ const Cart = () => {
       }
 
     
-      // useEffect(() => {
-      //   const item = JSON.parse(localStorage.getItem('items'))
-      //   if(item){
-      //     setItems()
-      //   }
-      // },[])
+   
 
-      const updateStorage = () => {
-        localStorage.setItem("cartItems", JSON.stringify(quantity));
-      };
+    const [quantity, setQuantity] = useState(() => {
+      const savedItems = localStorage.getItem("cartItems");
+      return savedItems ? JSON.parse(savedItems) : cartItems;
+    });
+  
+    const navigate = useNavigate();
+  
+    const handleQuantity = (e, index, value) => {
+      const updatedQuantity = quantity.map((item, i) => {
+        if (i === index) {
+          const newQuantity = value === "increase" ? item.quantity + 1 : Math.max(1, item.quantity - 1);
+          return {
+            ...item,
+            quantity: newQuantity,
+            total: item.price * newQuantity, // Updating total price
+          };
+        }
+        return item;
+      });
+  
+      setQuantity(updatedQuantity);
+    };
+  
+    const handleClose = (id) => {
+      const filteredItems = quantity.filter((item) => item.id !== id);
+      setQuantity(filteredItems);
+  
+      if (filteredItems.length === 0) {
+        navigate("/empty-cart");
+      }
+    };
+  
+    const handleClear = () => {
+      setQuantity([]);
+      localStorage.removeItem("cartItems");
+      navigate("/empty-cart");
+    };
+  
+    // Save updated quantity to localStorage whenever quantity changes
+    useEffect(() => {
+      localStorage.setItem("cartItems", JSON.stringify(quantity));
+    }, [quantity]);
+  
+    // Function to update localStorage only when proceeding to checkout
+    const updateStorage = () => {
+      localStorage.setItem("cartItems", JSON.stringify(quantity));
+    };
+      console.log(quantity)
 
     return (
         <div className='bg-white'>
@@ -152,8 +192,8 @@ const Cart = () => {
                     {  quantity.map((items,index) => (
                             <li key={items.id} className={`grid grid-cols-6 md:p-4 py-2 md:pl-10 pl-2 gap-3 items-center w-full border ${items.id === quantity.length ? "border":"border-b-0"}`}>
                             <div className='col-span-2 flex items-center md:gap-4 gap-2'>
-                                    <img src={items.img} className="md:w-[80px] md:h-[80px] w-[70px] object-cover border-[#f9edf7] border rounded-md " alt="Product" />
-                                <h2 className="md:font-semibold font-medium md:text-base text-[12px]   ">{items.productName}</h2>
+                                    <img src={items.image} className="md:w-[80px] md:h-[80px] w-[70px] object-cover border-[#f9edf7] border rounded-md " alt="Product" />
+                                <h2 className="md:font-semibold font-medium md:text-base text-[12px]   ">{items.name}</h2>
                             </div>
                             <div className="col-span-1 md:font-semibold font-medium md:text-base text-[12px]  text-center">
                                 <p className="text-black  ">{items.price}</p>

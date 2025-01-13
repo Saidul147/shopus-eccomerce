@@ -13,6 +13,20 @@ const TopSellings = ({ datas }) => {
       
       const randomData = shuffleArray(datas.slice(2, 8));
 
+      
+    let handleButton = (items) => {
+        let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+        let existingItem = cart.findIndex((itm) => itm.id === items.id)
+
+        console.log(existingItem)
+
+        if(existingItem === -1){
+            cart.push({...items})
+        }
+        localStorage.setItem("cartItems",JSON.stringify(cart))
+    }
+
     return (
         <div>
             <div className='bg-[#f8f8f8] hidden md:block'>
@@ -42,7 +56,7 @@ const TopSellings = ({ datas }) => {
                                             <p className='text-rose-500'>{item.discountedPrice}</p>
                                         </div>
                                     </div>
-                                    <button className=' absolute bottom-0 right-0 flex justify-end'>
+                                    <button className=' absolute bottom-0 right-0 flex justify-end' onClick={() => handleButton(item)}>
                                                 <span className='text-sm xl:text-[16px] font-bold text-rose-700 bg-rose-300 hover:bg-rose-700 hover:text-white py-3 xl:py-3 xl:px-6 lg:py-1 lg:px-4 pr-4 pl-6 rounded-tl-[40px] rounded-br-xl duration-300'>Add To Cart</span>
                                             </button>
                                     <div className='absolute top-1/2 duration-700   transition-all -translate-x-1/4 translate-y-1/3 group-hover:-translate-y-1/2 group-hover:-translate- mx-auto opacity-0 group-hover:opacity-100 w-full ' key={i}>

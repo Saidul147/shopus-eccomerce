@@ -7,6 +7,43 @@ import { IoIosHeartEmpty } from "react-icons/io";
 
 const NewArrivals = ({datas}) => {
 
+    // const handleButton = (item) => {
+    //     // Get existing cart from localStorage or initialize an empty array
+    //     let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+      
+    //     // Check if the item already exists in the cart
+    //     let existingItemIndex = cart.findIndex((cartItem) => cartItem.id === item.id);
+       
+      
+    //     if (existingItemIndex >= 0) {
+    //       // If the item exists, update its quantity
+    //       cart[existingItemIndex].quantity += 1;
+    //       cart[existingItemIndex].total = cart[existingItemIndex].price * cart[existingItemIndex].quantity; // Update total
+    //     } else {
+    //       // If the item does not exist, add it with initial quantity of 1
+    //       cart.push({ ...item, quantity: 1, total: item.price });
+    //     }
+      
+    //     // Save updated cart to localStorage
+    //     localStorage.setItem("cartItems", JSON.stringify(cart));
+      
+    //     console.log("Item added to cart:", cart);
+    //   };
+
+    let handleButton = (items) => {
+        let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+        let existingItem = cart.findIndex((itm) => itm.id === items.id)
+
+        console.log(existingItem)
+
+        if(existingItem === -1){
+            cart.push({...items})
+        }
+        localStorage.setItem("cartItems",JSON.stringify(cart))
+    }
+
+
 
     return (
         <div className='bg-white'>
@@ -35,8 +72,8 @@ const NewArrivals = ({datas}) => {
                                         <p className='text-rose-500'>{item.discountedPrice}</p>
                                     </div>
                                 </div>
-                                <button className='  flex justify-end h-full items-end'>
-                                    <span className=' font-bold text-rose-700 bg-rose-300 hover:bg-rose-700 hover:text-white py-3 pr-4 pl-6 rounded-tl-[40px] rounded-br-xl duration-300'>Add To Cart</span>
+                                <button className='  flex justify-end h-full items-end' onClick={() => handleButton(item)}>
+                                    <span  className=' font-bold text-rose-700 bg-rose-300 hover:bg-rose-700 hover:text-white py-3 pr-4 pl-6 rounded-tl-[40px] rounded-br-xl duration-300'>Add To Cart</span>
                                 </button>
 
                                 <div className='absolute top-1/2 duration-700  transition-all translate-y-1/3 group-hover:-translate-y-1/2 mx-auto opacity-0 group-hover:opacity-100 w-full ' key={i}>

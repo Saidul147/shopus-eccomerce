@@ -23,7 +23,7 @@ const TopSellingsProducts = () => {
 
     },[])
 
-    console.log(datas)
+    // console.log(datas)
 
  
 
@@ -48,9 +48,9 @@ const TopSellingsProducts = () => {
                                             <img src={item.image} className='my-8 md:my-4 w-full h-full' alt="" />
                                             </div>
                                         </div>
-                                        <div className='md:pl-4 lg:pl-6 xl:pl-3 pb-4 px-4 flex flex-col items-center md:items-start w-full '>
-                                            <p className='flex gap-1'>{Array.from({ length: item.rating }).map((_, i) => (
-                                                <IoStar className='text-[#ffa800] text-[14px]' />
+                                        <div key={i} className='md:pl-4 lg:pl-6 xl:pl-3 pb-4 px-4 flex flex-col items-center md:items-start w-full '>
+                                            <p key={i} className='flex gap-1'>{Array.from({ length: item.rating }).map((_, i) => (
+                                                <IoStar key={i} className='text-[#ffa800] text-[14px]' />
                                             ))}
                                             </p>
                                             <h2 className='font-jost md:text-[16px] text-[#232532] font-[700] mt-2 text-[22px]'>{item.name}</h2>
