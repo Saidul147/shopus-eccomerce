@@ -23,6 +23,7 @@ import icon5 from "../assets/icons/boots_5896330.png"
 import icon7 from "../assets/icons/sneakers_17206283.png"
 import icon8 from "../assets/icons/watch_6839373.png"
 import icon9 from "../assets/icons/cap_18073592.png"
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -192,7 +193,7 @@ const Navbar = () => {
                 <li onMouseEnter={() => handleMouseEnterNav('home')}
                   onMouseLeave={() => handleMouseLeaveNav('home')}
                   className='relative group'>
-                  <a href="">Home</a>
+                  <NavLink to={"/"}>Home</NavLink> 
                   <ul className={`flex flex-col absolute bg-white w-40 p-4 gap-3 shadow-md top-[38px] -left-1 
                     transition-all duration-500 ease-in-out text-[16px] md:text-[12px] lg:text-[16px] text-[#797979] rounded-sm
                     ${hoverStates.home

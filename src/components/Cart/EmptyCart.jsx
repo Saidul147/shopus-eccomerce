@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 const EmptyCart = () => {
     return (
-        <div className='max-w-[1320px] mx-auto py-10 pb-[120px]'>
+        <div className='max-w-[1320px] mx-auto py-10 pb-[120px] px-4 2xl:px-0'>
             <div className=''>
                         <p className='text-center w-full mb-[30px] md:mb-0 md:text-start'>Home{location.pathname}</p>
                     </div>
