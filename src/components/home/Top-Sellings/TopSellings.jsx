@@ -25,6 +25,8 @@ const TopSellings = ({ datas }) => {
             cart.push({...items})
         }
         localStorage.setItem("cartItems",JSON.stringify(cart))
+        
+        window.dispatchEvent(new Event("cartUpdated"));
     }
 
     return (

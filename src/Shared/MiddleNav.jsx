@@ -80,17 +80,46 @@ const MiddleNav = () => {
     }
   };
 
-  const [cart, setCart] = useState([]);
 
-  // Load cart from localStorage on mount
-  useEffect(() => {
-    setCart(JSON.parse(localStorage.getItem("cartItems")) || []);
-  }, []);
+
+    //to update automatically data from localStorage to browser from different component .then we have to use 
+    // window.dispatchEvent(new Event("cartUpdated")); 
+    // and after that where i want to see the update of data i have to write this code below
+
+    const [cart, setCart] = useState(() => JSON.parse(localStorage.getItem("cartItems")) || []);
+
+    // Function to update cart from localStorage
+    const updateCartFromLocalStorage = () => {
+      const updatedCart = JSON.parse(localStorage.getItem("cartItems")) || [];
+      setCart(updatedCart);
+    };
+
+    useEffect(() => {
+      // Initial load
+      updateCartFromLocalStorage();
+
+      // Add an event listener for the "cartUpdated" event
+      window.addEventListener("cartUpdated", updateCartFromLocalStorage);
+
+      return () => {
+        window.removeEventListener("cartUpdated", updateCartFromLocalStorage);
+      };
+    }, []);
+
+    useEffect(() =>{
+      localStorage.setItem("cartItem",JSON.stringify(cart))
+    },[cart])
+
+    let handleClose = (id) => {
+      let update = cart.filter((itm) => itm.id !== id)
+      setCart(update)
+      // console.log(update)
+    }
 
 
 
   return (
-    <div>
+    <div className=''>
       <div className='md:grid hidden grid-cols-8 px-4 2xl:px-0 py-3 max-w-[1320px]  mx-auto ' >
 
         <div className=' col-span-2'>
@@ -178,13 +207,13 @@ const MiddleNav = () => {
             </div>
             <div className='relative' onMouseEnter={() => handleMouseEnterNav('cart')}
               onMouseLeave={() => handleMouseLeaveNav('cart')}>
-              <NavLink   to={cart.length > 0 ? "/cart" : "/empty-cart" }>
+              <NavLink to={cart.length > 0 ? "/cart" : "/empty-cart"}>
                 <PiBag className='text-2xl ' />
                 <span className='absolute text-[10px] w-4 h-4 flex items-center justify-center text-xs font-[600] text-white bg-rose-700 rounded-full -right-1 -top-1'>
                   {cart.length}
                 </span>
               </NavLink>
-              <ul
+              {/* <ul
                 className={`absolute grid grid-flow-row gap-3 bg-white p-4 z-50 shadow-md top-[20px] -left-[220px]
                 transition-all duration-500 ease-in-out text-[16px] md:text-[12px] lg:text-[16px] text-[#797979] rounded-sm
               ${hoverStates ? 'opacity-100 translate-y-1 visible' : 'opacity-0 translate-y-0 invisible'} w-[300px]`}
@@ -197,9 +226,9 @@ const MiddleNav = () => {
                       <h2 className="font-semibold text-sm  ">{item.name}</h2>
                       <p className="text-rose-700 text-sm">{item.price}</p>
                     </div>
-                    <IoClose className="justify-self-end text-gray-500 cursor-pointer hover:text-red-500" />
+                    <IoClose onClick={() => handleClose(item.id)} className="justify-self-end text-gray-500 cursor-pointer hover:text-red-500" />
                   </li>
-                ))}
+                ))} */}
 
                 {/* <li className="hover:text-rose-700 grid grid-cols-6 gap-3 items-center w-full">
                   <img src={cartimg1} className="col-span-2 w-full h-auto object-cover rounded-md bg-rose-200" alt="Product" />
@@ -233,7 +262,7 @@ const MiddleNav = () => {
                   </div>
                   <IoClose className="justify-self-end text-gray-500 cursor-pointer hover:text-red-500" />
                 </li> */}
-              </ul>
+              {/* </ul> */}
             </div>
             <div>
               <a href="">

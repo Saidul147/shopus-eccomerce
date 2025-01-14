@@ -234,7 +234,7 @@ const Navbar = () => {
                   <ul className={`flex flex-col absolute bg-white text-[#797979] w-[200px] py-6 p-4 gap-3 shadow-md top-[38px] -left-1 rounded-sm
                     transition-all duration-500 ease-in-out  ${hoverStates.page ? "opacity-100 translate-y-1 visible" : "opacity-0 translate-y-0 invisible "}`} >
                     {menuData[2].subMenu.map((item, i) => (
-                      <li key={i} className='hover:text-rose-700 text-[16px] md:text-[12px] lg:text-[16px]' key={i} ><a href="">{item.name}</a></li>
+                      <li key={i} className='hover:text-rose-700 text-[16px] md:text-[12px] lg:text-[16px]'  ><a href="">{item.name}</a></li>
                     ))}
                   </ul>
 

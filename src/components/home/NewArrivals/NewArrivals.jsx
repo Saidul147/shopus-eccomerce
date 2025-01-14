@@ -4,6 +4,8 @@ import { TfiFullscreen } from "react-icons/tfi";
 import { SlRefresh } from "react-icons/sl";
 import { IoIosHeartEmpty } from "react-icons/io";
 
+import { getLocalStorage,setLocalStorage } from '../../LocalStorage';
+
 
 const NewArrivals = ({datas}) => {
 
@@ -31,7 +33,9 @@ const NewArrivals = ({datas}) => {
     //   };
 
     let handleButton = (items) => {
-        let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+        // let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+        let cart = getLocalStorage()
 
         let existingItem = cart.findIndex((itm) => itm.id === items.id)
 
@@ -40,7 +44,9 @@ const NewArrivals = ({datas}) => {
         if(existingItem === -1){
             cart.push({...items})
         }
-        localStorage.setItem("cartItems",JSON.stringify(cart))
+        setLocalStorage(cart)
+
+        window.dispatchEvent(new Event("cartUpdated"));
     }
 
 
