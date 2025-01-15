@@ -1,3 +1,4 @@
+
 const express = require("express")
 const app = express();
 const cors = require("cors")
@@ -13,7 +14,8 @@ app.use(
       origin: [
         "http://localhost:5173",
         "http://localhost:5174",
-        "https://shopus-sd.netlify.app",
+        "https://shopus-sd.netlify.app",  // Netlify frontend
+        "https://shopus-eccomerce.vercel.apps",  // Vercel frontend
       ],
     })
   );
