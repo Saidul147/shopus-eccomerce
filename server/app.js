@@ -13,7 +13,7 @@ app.use(
       origin: [
         "http://localhost:5173",
         "http://localhost:5174",
-        "https://emma-antigua-guys-fed.trycloudflare.com",
+        "https://shopus-sd.netlify.app",
       ],
     })
   );
