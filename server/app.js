@@ -14,7 +14,7 @@ app.use(
       origin: [
         "http://localhost:5173",
         "http://localhost:5174",
-        "https://shopus-eccomerce.vercel.apps",  // Vercel frontend
+        "https://shopus-eccomerce.vercel.app",  // Vercel frontend
         "https://shopus-sd.netlify.app",  // Netlify frontend
       ],
     })
