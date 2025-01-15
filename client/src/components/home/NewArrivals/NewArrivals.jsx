@@ -6,6 +6,9 @@ import { IoIosHeartEmpty } from "react-icons/io";
 
 import { getLocalStorage,setLocalStorage } from '../../LocalStorage';
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const NewArrivals = ({datas}) => {
 
@@ -33,6 +36,8 @@ const NewArrivals = ({datas}) => {
     //   };
 
     let handleButton = (items) => {
+
+        toast.success("Your order has been Added to the Cart.");
         // let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
 
         let cart = getLocalStorage()

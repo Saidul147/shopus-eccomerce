@@ -8,7 +8,8 @@ import cartimg2 from "../../assets/product-img-2.png"
 import cartimg3 from "../../assets/product-img-3.png"
 import cartimg4 from "../../assets/product-img-4.png"
 
-
+import { ToastContainer,toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Cart = () => {
@@ -81,6 +82,7 @@ const Cart = () => {
   const navigate = useNavigate();
 
   const handleQuantity = (e, index, value) => {
+
     const updatedQuantity = quantity.map((item, i) => {
       if (i === index) {
         const newQuantity = value === "increase" ? item.quantity + 1 : Math.max(1, item.quantity - 1);
@@ -98,12 +100,17 @@ const Cart = () => {
   };
 
       const handleClose = (id) => {
+
+       toast.error("Item has been removed")
+
         const filteredItems = quantity.filter((item) => item.id !== id);
         setQuantity(filteredItems);
 
         if (filteredItems.length === 0) {
           navigate("/empty-cart");
         }
+
+        
       };
 
       const handleClear = () => {
@@ -192,6 +199,7 @@ const Cart = () => {
         </div>
 
       </div>
+      <ToastContainer />
     </div>
   );
 };

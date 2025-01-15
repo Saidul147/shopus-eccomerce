@@ -12,6 +12,9 @@ import TopSellingsProducts from "./top-selling-products/TopSellingsProducts";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const Home = () => {
@@ -58,6 +61,7 @@ const Home = () => {
                 <BestSellers></BestSellers>
                 <BestSellsWeek datas={datas}></BestSellsWeek>
                 <TopSellingsProducts datas={datas}></TopSellingsProducts>
+                <ToastContainer />
                 <></>
             </div>
         </div>

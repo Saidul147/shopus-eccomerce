@@ -4,12 +4,16 @@ import { TfiFullscreen } from "react-icons/tfi";
 import { SlRefresh } from "react-icons/sl";
 import { IoIosHeartEmpty } from "react-icons/io";
 
-
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const FlashSale = ({ datas, title }) => {
 
 
     let handleButton = (items) => {
+
+        toast.success("Your order has been Added to the Cart.");
+
         let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
 
         let existingItem = cart.findIndex((itm) => itm.id === items.id)
