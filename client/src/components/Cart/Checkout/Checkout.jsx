@@ -49,7 +49,7 @@ const Checkout = () => {
 
     useEffect(() => {
         let total = 0;
-        let cartTotal = carts.map((item) => {
+        let cartTotals = carts.map((item) => {
             total += item.total
         })
         setTotals(total.toFixed(2))
