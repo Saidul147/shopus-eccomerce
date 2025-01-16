@@ -44,7 +44,7 @@ app.post("/create-checkout-session", async (req, res) => {
             payment_method_types: ["card"],
             line_items: lineItems,
             mode: "payment",
-            success_url: `http://localhost:5173/success?firstName=${customerDetails.firstName}&lastName=${customerDetails.lastName}&email=${customerDetails.email}&phone=${customerDetails.phone}&address=${customerDetails.address}&country=${customerDetails.country}&city=${customerDetails.city}&zipCode=${customerDetails.zipCode}`,
+            success_url: `https://shopus-sd.netlify.app/success?firstName=${customerDetails.firstName}&lastName=${customerDetails.lastName}&email=${customerDetails.email}&phone=${customerDetails.phone}&address=${customerDetails.address}&country=${customerDetails.country}&city=${customerDetails.city}&zipCode=${customerDetails.zipCode}`,
             cancel_url: `http://localhost:5173/canceled`,
 
         });
